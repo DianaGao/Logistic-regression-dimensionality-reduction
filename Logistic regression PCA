@@ -45,10 +45,6 @@ y_pred = model.predict(X_test_PCA)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
-
-
-
-
 #Visualizaing the confusion matrix
 from sklearn.utils.multiclass import unique_labels
 def plot_confusion_matrix(y_test, y_pred, classes,
@@ -113,6 +109,8 @@ plot_confusion_matrix(y_test, y_pred, classes = y_pred,
     # Plot normalized confusion matrix
 plot_confusion_matrix(y_test, y_pred, classes = y_pred, normalize=True,
                       title='Normalized confusion matrix')
+                      
+Accuracy = round((cm[0][0]+cm[1][1]+cm[2][2])/sum(sum(cm[:])),4)
 
 plt.show()
 
