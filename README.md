@@ -40,3 +40,5 @@ Because in this business case the cluster of the customers is known, so LDA is a
 ## Results
 LDA finally select the two features to project the data into the subspace. After input the transform data into the logistic regression model, the newly trained model shows even better performance. The testing result reveals the new model successfully classified all the testing data. The accuracy increased to 100%.  
 
+![](ConfusionLDA.PNG)
+
