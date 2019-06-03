@@ -1,5 +1,5 @@
 Logistic-regression-dimensionality-reduction
-Using the principle component analysis to find the two main features to represent the 13 variaous wine charasteristics and develop a logistic regression model to predict the customer types using the two features as the inputs.  
+Using the principal component analysis to find the two main features to represent the 13 various wine characteristics and develop a logistic regression model to predict the customer types using the two features as the inputs.  
 
 # Problem statement
 
@@ -7,22 +7,22 @@ A wine company collected the 13 features of their wine products, also its market
 
 # Data
 The data resource is from the UCI machine learning repository.
-Dataset containing 13 features and the customer segment information.
-The partialy screenshot is shown below:
+The dataset containing 13 features and the customer segment information.
+The partially screenshot is shown below:
 ![](DataSet.PNG)
 
 
 # Reduce the features
 ## Principle
-The principle to reduce the 13 features of the wine products to less is by finding the hidden layers that can explain the most of the features variance. In this case, principle component analysis (PCA) is applied to project the 13 varibales into smaller dimensional subspace. 
+The principle to reduce the 13 features of the wine products to less is by finding the hidden layers that can explain most of the variance of the features. In this case, principal component analysis (PCA) is applied to project the 13 variables into smaller dimensional subspace. 
 
 The visualization of the abstract PCA application can see from this link: http://setosa.io/ev/principal-component-analysis/
 
 ## Result
-The 12 variance ratio after applied the ACP shows the top two components explain 36.88% and 19.32% respectively. All together the top two components already can explain the over 50% of the variance of the 13 features, which is sufficient enough to represent the 13 wine features to make a prediction. Hence, we are selecting the top two components pca1 and pca2 to further develop the logistic regression model. Reduce to the two dimensions is the best way to visualize the model and easier to interpretate.
+The 12 variance ratio after applied the ACP shows the top two components explain 36.88% and 19.32% respectively. Altogether the top two components already can explain the over 50% of the variance of the 13 features, which is sufficient enough to represent the 13 wine features to make a prediction. Hence, we are selecting the top two components pca1 and pca2 to further develop the logistic regression model. Reduce to the two dimensions is the best way to visualize the model and easier to interpret.
 
 # Logistic regression model
-In the multiclass logistic regression model, the model re-run the binary classification model several times and predict the probabality of the observation fill into the single class (Customer type 1, customer type 2, or customer type 3).
+In the multiclass logistic regression model, the model re-runs the binary classification model several times and predict the probability of the observation fill into the single class (Customer type 1, customer type 2, or customer type 3).
 
 As shown in the confusion matrix the model does pretty well with the prediction, only 1 point is misclassified.
 ![](ConfusionMatrix.PNG)
